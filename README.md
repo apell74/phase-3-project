@@ -71,6 +71,7 @@ While our model is performing well, it could be improved. First and foremost, an
 
 ## Repository Structure
 - data
+    - customer_churn_data.csv
 - Phase 3 Project.ipynb
 - Phase_3_Project_Presentation(link)
 - .gitignore
