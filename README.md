@@ -46,7 +46,7 @@ Another notable improvement is that we managed to somewhat stem the overfitting 
 **Image: Map of Churn Rates by State**
 
 
-<img src="images/churn_rate_screenshot.png" width="600" height="400">
+<img src="images/churn_rate_map.png" width="600" height="400">
 
 
 **Image: Confusion Matrix of Fine-Tuned Model**
@@ -91,10 +91,11 @@ While our model is performing well, it could be improved. First and foremost, an
 - data
     - customer_churn_data.csv
 - Phase 3 Project.ipynb
-- Phase_3_Project_Presentation(link)
+- Phase_3_Project_Presentation(Direct link [here](https://docs.google.com/presentation/d/14czrKFR2VcKVQh0deEprjvhTwvCj17pH8yZ7RqYLX-k/edit?usp=sharing))
 - images
     - confusion_matrix_screenshot.png
     - feature_importances_screenshot.png
+    - churn_rate_map.png
 - .gitignore
 - README.md
 
