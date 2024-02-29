@@ -91,7 +91,7 @@ While our model is performing well, it could be improved. First and foremost, an
 - data
     - customer_churn_data.csv
 - Phase 3 Project.ipynb
-- Phase_3_Project_Presentation(Direct link [here](https://docs.google.com/presentation/d/14czrKFR2VcKVQh0deEprjvhTwvCj17pH8yZ7RqYLX-k/edit?usp=sharing))
+- Phase_3_Project_Presentation (Direct link [here](https://docs.google.com/presentation/d/14czrKFR2VcKVQh0deEprjvhTwvCj17pH8yZ7RqYLX-k/edit?usp=sharing))
 - images
     - confusion_matrix_screenshot.png
     - feature_importances_screenshot.png
