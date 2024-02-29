@@ -46,7 +46,7 @@ Another notable improvement is that we managed to somewhat stem the overfitting 
 **Image: Map of Churn Rates by State**
 
 
-<img src="images/churn_rate_screenshot.png" width="600" height="400">
+<img src="images/churn_rate_screenshot.png" width="800" height="600">
 
 
 **Image: Confusion Matrix of Fine-Tuned Model**
