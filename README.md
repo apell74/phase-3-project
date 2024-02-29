@@ -43,11 +43,11 @@ The final product saw incremental improvements in already-solid performance almo
 
 Another notable improvement is that we managed to somewhat stem the overfitting issue we had with both our decision tree and our base random forest model. With our base model, we had a perfect score on the training data. Our accuracy on the test data was 93%. With the tuned model, we have reduced our performance on the training data to around 98%. With the same accuracy score, we have reduced the error between the training and test set. This indicates that our model has become less overfit to the training data and can still generalize just as well. Although I wish I could have improved recall a bit more, I am very pleased with this outcome.
 
-**Image: **
+**Image: Confusion Matrix of Fine-Tuned Model**
 
-<img src="images/confusion_matrix_screenshot.png" width="600" height="400">
+<img src="images/confusion_matrix_screenshot.png" width="400" height="400">
 
-**Image: **
+**Image: Chart of Feature Importances**
 
 <img src="images/feature_importances_screenshot.png" width="600" height="400">
 
