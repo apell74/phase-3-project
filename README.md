@@ -7,22 +7,16 @@ This project will use different classifiers to analyze and predict customer chur
 Iterative analysis of multiple features creates a better understanding of which factors contribute to a customer switching providers. My firm, Pell & Associates Data Solutions, has developed a classifier model that is capable of predicting with up to 93% accuracy whether a customer will switch providers or not. Being able to accurately forecast churn and knowing its key predictors is vital for any telecommunications business, as it allows them to stay ahead of customer needs and expand their services with a clear perspective on risk.
 
 # Business Understanding
-Telecommunications companies provide some of the most valuable services in the world to their customers allowing people to communicate across states, borders, and continents. The market is valued at over 1.7 trillion dollars globally. Telecoms companies are in a unique position because, to the average consumer, the level of service between most of these companies is identical. Moreover, there is an abundance of choice; many reputable companies exist in most countries. Since most people cannot go without a service provider, they may be more likely to switch to another provider if they perceive a problem with their current one. For service providers in America and abroad, it is important to foresee the risk of customers switching providers, as unexpected departures can lead to a drop in revenues and a lack of clarity regarding how to stem the tide.
+Telecommunications companies provide some of the most valuable services in the world to their customers allowing people to communicate across states, borders, and continents. The market is valued at over 1.7 trillion dollars globally. Telecoms companies are in a unique position because, to the average consumer, the level of service between most of these companies is identical. Moreover, there is an abundance of choice; many reputable companies exist in most countries. For service providers, it is important to foresee the risk of customers switching providers, as unexpected departures can lead to a drop in revenues and a lack of clarity regarding how to stem the tide.
 
 Pell & Associates Data Solutions is here to help provide that clarity. This project will examine over 3300 customer records from across America, modeling trends and building predictive classifiers that are able to accurately assess whether future customers are at risk of leaving.
 
 # Data Understanding
-The available data comes from a telecom compoany's record of customer information. Our target for this analysis will be the "churn" column. In this case, churn is a metric that reports whether a customer switched providers or not. For this project, the "negative case" will be 0, indicating that the customer did not "churn", or switch. The positive case will be 1, meaning that the customer did switch. My analysis will examine features that are likely to play a role in customer churn. They include:
+The available data comes from a telecom compoany's record of customer information. Our target for this analysis will be the "churn" column. In this case, churn is a metric that reports whether a customer switched providers or not. For this project, the "negative case" will be 0, indicating that the customer did not "churn", or switch. The positive case will be 1, meaning that the customer did switch. My analysis will examine features that are likely to play a role in customer churn. Key features include:
 
 - State
-- Account Length (in months)
-- Area Code
 - International Plan (y/n)
-- Voice Mail Plan (y/n)
-- No. of Voicemail Messages
 - Total Day Minutes, Calls, and Charges
-- Total Evening Minutes, Calls, and Charges
-- Total Night Minutes, Calls, and Charges
 - Total International Minutes, Calls, and Charges
 - No. of Customer Service Calls
 
@@ -39,9 +33,18 @@ This analysis uses various classifier techniques. We start with linear regressio
 # Results
 Our final model was a tuned version of the random forest method we ran as part of the base modeling process. The tuning process consisted of changes iterated over several sets of hyperparameter categories. GridSearchCV ran these iterations, finding the specific set of hyperparameters that led to optimal performance for a given scoring metric. I optimized for recall since that is the most important metric for stakeholders in this particular case and because it seems we are already achieving an excellent accuracy score.
 
+The table below shows how the models improved over iterations:
+
+| Model Type            | Train Accuracy | Test Accuracy | Test Recall | Time To Run |
+|-----------------------|----------------|---------------|-------------|-------------|
+| Logistic Regression   | 78%            | 77%           | 77%         | 58.3ms      |
+| Decision Tree         | 100%           | 91%           | 86%         | 100ms       |
+| Random Forest         | 100%           | 93%           | 84%         | 590ms       |
+| Random Forest (Tuned) | 98%            | 93%           | 85%         | 1.39s       |
+
 The final product saw incremental improvements in already-solid performance almost all the way across the board. We saw marginal increases in our accuracy score, as well as improved recall for the positive case, which is what we were chasing and optimizing for. Precision and recall for the negative case remained stellar.
 
-Another notable improvement is that we managed to somewhat stem the overfitting issue we had with both our decision tree and our base random forest model. With our base model, we had a perfect score on the training data. Our accuracy on the test data was 93%. With the tuned model, we have reduced our performance on the training data to around 98%. With the same accuracy score, we have reduced the error between the training and test set. This indicates that our model has become less overfit to the training data and can still generalize just as well. Although I wish I could have improved recall a bit more, I am very pleased with this outcome.
+Another notable improvement is that we managed to somewhat stem the overfitting issue we had with both our decision tree and our base random forest model. As the table indicates, our model has become less overfit to the training data and can still generalize just as well. Although I wish I could have improved recall a bit more, I am very pleased with this outcome.
 
 **Image: Map of Churn Rates by State**
 
